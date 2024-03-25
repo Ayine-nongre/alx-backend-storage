@@ -1,0 +1,2 @@
+// A script that returns the count of objects in db
+db.school.count()
