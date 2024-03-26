@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""
-def schools_by_topic(mongo_collection, topic):
-mongo_collection will be the pymongo collection object
-topic (string) will be topic searched
-"""
+""" MongoDB Operations with Python using pymongo """
 
 
 def schools_by_topic(mongo_collection, topic):
-    """ Function that returns all docs having a particular topic """
-    return mongo_collection.find({"topics": topic})
+    """ returns the list of school having a specific topic """
+    documents = mongo_collection.find({"topics": topic})
+    list_docs = [d for d in documents]
+    return list_docs
